@@ -1,0 +1,217 @@
+html{
+    max-width:1440px;
+    margin: auto;
+  }
+  * {
+      
+      font-family: Arial, Helvetica, sans-serif;
+      object-fit: cover;
+    }
+    * {
+        box-sizing: border-box;
+      }
+/*______________main _________________*/
+      main{
+        margin: 0em;
+    }
+ /*______________section 1 _________________*/
+ #section1contact {
+  width: 1440px;
+  height: 650px;
+  /* background-color: aqua; */
+  margin-top: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#tete {
+  width: 100%;
+  height: 450px;
+  /* background-color: aqua; */
+  /* margin-top: 10px; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+#tete img{
+  width: 1440px;
+  height: 662px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  filter: brightness(140%); 
+}
+#tete h1 {
+  position: absolute;
+  z-index: 2;
+  top: 360px;
+  left: 480px;
+  height: 150px;
+  color:#C79B76;
+  font-size: 100px;
+  font-weight: bold;   
+  font-family: "Italiana", sans-serif;
+  font-weight: 1800;
+  font-style: normal;
+  margin-top: 0px;
+  animation-duration: 10s;
+  animation-name: slidein;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+      /*______________section 2 _________________*/
+    
+      #section2contact {
+        width: 100%;
+        height: 680px;
+        /* background-color: aqua; */
+        margin-top: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 150px;
+      }
+      
+      input[type=submit]:hover {
+        background-color: #1B4A56;
+      } 
+      
+      /* Styliser le conteneur/section contact  */
+      .containercontact {
+        width: 1440px;
+        border-radius: 5px;
+        padding: 10px;
+        /* Attention changer le sens du \ en / pour charger l'image de fond */
+        background-image: url("images site web/fondimagecontact.png");
+        background-repeat: no-repeat;
+        background-size:  100%;  
+      }
+      .containercontact h2{
+        font-size: 35px;
+        font-weight: bold;   
+        font-family: "Italiana", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }    
+
+      .containercontact p{
+        font-size: 25px;
+        font-weight: bold;   
+        font-family: "Roboto", sans-serif;
+        font-weight: 400;
+        font-style: normal;
+      }    
+      
+      /* créer deux colonnes qui flottent l'une à côté de l'autre */
+      .columninfo {
+        float: left;
+        width: 50%;
+        margin-top: 16px;
+        padding: 1px;
+        font-size: 25px;
+        font-weight: bold;   
+        font-family: "Italiana", sans-serif;
+        font-style: normal;
+        line-height: 39px;
+        height: 650px;
+      }
+
+      #coordonneescont {
+        width: 500px;
+      }
+
+      #coordonneescont p {
+        position: absolute;
+        z-index: 2;
+        height: 150px;
+        color:  #1B4A56;
+        font-size: 25px;
+        font-weight: bold;   
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        margin-top: 0;
+        text-align: center; 
+        left: 180px;
+        
+      }
+
+      .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 120px;  
+      }
+
+      .input-groupe {
+        margin-bottom: 15px;
+    }
+    
+    .input-groupe label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    
+    .input-groupe input {
+        width: 95%;
+        padding: 10px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+    }
+    
+    button {
+        width: 95%;
+        padding: 10px;
+        background-color: #1B4A56;
+        color:#C79B76;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    
+    button:hover {
+        background-color: #C79B76;
+        color: #1B4A56;
+    }
+    
+    #message{
+        height: 90px;
+    }
+
+      /* _________ carte google maps debut____________*/
+      iframe {
+        margin-top: 150px;
+        margin-left: 25%;
+        width: 50%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;  
+    }
+     /* _________ carte google maps fin ____________*/
+
+
+
+
+      

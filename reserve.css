@@ -1,0 +1,653 @@
+body{
+  max-width:1440px;
+  margin: auto;
+  height: 3500px;
+}
+* {
+    
+    font-family: Arial, Helvetica, sans-serif;
+    object-fit: cover;
+  }
+  
+/* _______________ MAIN _______________ */
+
+/* main {
+    width: auto;
+    margin-top: 1%;
+    
+} */
+      /*______________section 1 _________________*/
+
+ 
+  #section1reserver {
+  width: 1440px;
+  height: 600px;
+  /* background-color: aqua; */
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  } 
+  
+
+#tetereserv {
+  width: 100%;
+  height: 600px;
+  /* background-color: aqua; */
+  margin-top: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} 
+
+#tetereserv img{
+  width: 93.75%;
+  height: 600px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 1;
+  filter: brightness(100%); 
+  margin-top: 0;
+}
+#tetereserv h1 {
+  position: absolute;
+  z-index: 2;
+  top: 250px;
+  left: 80px;
+  height: 150px;
+  color:#C79B76;
+  font-size: 100px;
+  font-weight: bold;   
+  font-family: "Italiana", sans-serif;
+  font-weight: 1800;
+  font-style: normal;
+  margin-top: 1px;
+  animation-duration: 10s;
+  animation-name: slidein;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/* _______________ SECTION 2 _______________ */
+
+
+/* reservation hotel */
+
+:root {
+  --primary-color: #1B4A56;
+  --secondary-color: #1B4A56;
+  --accent-color: #e67e22;
+  --success-color: #2ecc71;
+  --error-color: #e74c3c;
+  --gradient-start: #1a2a6c;
+  --gradient-middle: #b21f1f;
+  --gradient-end: #fdbb2d;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transform: translateY(0);
+  transition: transform 0.3s ease;
+  margin-top: 100px;
+}
+
+.container:hover {
+  transform: translateY(-5px);
+}
+
+.header {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color:#C79B76;
+  padding: 20px 10px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  font-family: "Italiana", sans-serif;
+  /* height: 100px; */
+}
+
+.header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, transparent 48%, rgba(255,255,255,0.1) 50%, transparent 52%);
+  background-size: 200% 200%;
+  animation: shine 3s linear infinite;
+}
+
+@keyframes shine {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.header h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+}
+
+.booking-form {
+  padding: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  background:#C79B76;
+}
+
+.room-preview {
+  grid-column: 0.58 / -1;
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.room-preview:hover {
+  transform: scale(1.02);
+}
+
+.room-preview img {
+  max-width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.room-preview img:hover {
+  transform: scale(1.03);
+}
+
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+  
+}
+
+label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--primary-color);
+  font-weight: 600;
+  font-size: 0.95em;
+  transition: color 0.3s ease;
+}
+
+input, select {
+  width: 90%;
+  padding: 15px;
+  border: 2px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  background: #f8f9fa;
+}
+
+input:hover, select:hover {
+  background: #1B4A56;
+  border-color: var(--secondary-color);
+  color: #C79B76;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--secondary-color);
+  box-shadow: 0 0 0 4px rgba(206, 86, 30, 0.1);
+  background: white;
+}
+
+.error {
+  color: var(--error-color);
+  font-size: 14px;
+  margin-top: 5px;
+  display: none;
+  animation: shake 0.5s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  75% { transform: translateX(5px); }
+}
+
+.price-summary {
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 15px;
+  border-radius: 15px;
+  margin-top: 10px;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+ 
+}
+
+.price-summary h3 {
+  color: var(--primary-color);
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.price-details {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  padding: 10px 0;
+  transition: transform 0.3s ease;
+}
+.price-details input {
+  width: 150px;
+  color: #1B4A56;
+}
+
+.price-details:hover {
+  transform: translateX(10px);
+}
+
+button {
+  grid-column: 1 / -1;
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 20px;
+  border: none;
+  border-radius: 12px;
+  font-size: 18px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative;
+  overflow: hidden;
+}
+
+button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+button:active {
+  transform: translateY(0);
+}
+
+button::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: rgba(255,255,255,0.1);
+  transform: rotate(45deg);
+  transition: all 0.3s ease;
+}
+
+button:hover::after {
+  transform: rotate(45deg) translate(50%, 50%);
+}
+
+.availability-indicator {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-top: 20px;
+  padding: 15px;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.3s ease;
+}
+
+.availability-indicator:hover {
+  transform: translateX(5px);
+}
+
+.indicator {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.indicator::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+      transform: scale(1);
+      opacity: 1;
+  }
+  50% {
+      transform: scale(1.5);
+      opacity: 0;
+  }
+  100% {
+      transform: scale(1);
+      opacity: 0;
+  }
+}
+
+.available {
+  background: var(--success-color);
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+.unavailable {
+  background: var(--error-color);
+  box-shadow: 0 0 10px rgba(231, 76, 60, 0.5);
+}
+
+/* Custom Select Styling */
+select {
+  appearance: none;
+  /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%232c3e50' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E"); */
+  background-repeat: no-repeat;
+  background-position: right 15px center;
+  background-size: 20px;
+  padding-right: 45px;
+}
+
+/* Toast Notification */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 15px 25px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  transform: translateX(120%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.toast.show {
+  transform: translateX(0);
+}
+
+.toast.success {
+  border-left: 4px solid var(--success-color);
+}
+
+.toast.error {
+  border-left: 4px solid var(--error-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .booking-form {
+      grid-template-columns: 1fr;
+      padding: 20px;
+  }
+
+  .room-preview img {
+      height: 300px;
+  }
+
+  .header h1 {
+      font-size: 2em;
+  }
+
+  body {
+      padding: 20px 10px;
+  }
+}
+
+/* Loading Animation */
+.loading {
+  position: relative;
+}
+
+.loading::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255,255,255,0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+}
+
+.loading::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border: 3px solid var(--secondary-color);
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  z-index: 1;
+}
+
+@keyframes spin {
+  to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+
+
+
+
+
+
+/* reservation hotel */
+/* _______________ SECTION 3 AFFICHER/MASQUER_______________ */
+/* #section3 { */
+/* } */
+  .accordion {
+    position: relative;
+    width: 15%;
+    height: 50px;
+    border-radius: 10px;
+    /* background-color: rgb(235, 102, 25); */
+    display: flex;
+    flex-direction: row;
+    margin-top: 100px;
+    justify-content: space-around;
+    border-width: 15px;
+    border:1px solid black;
+  }
+  
+
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+  background-color: #943636;
+  width: 250px;
+ 
+}
+
+button.accordion.active {
+  width: 300px;
+  height: 50px;
+}
+
+/* Style the accordion panel. Note: hidden by default */
+.panel {
+  padding: 0 18px;
+  background-color: rgb(29, 169, 85);
+  display: none;
+  overflow: hidden;
+   
+  
+}
+
+#proposition {
+  width: 40%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 10px; */
+  align-items: normal;
+  text-align: left;
+  justify-content: space-between; 
+  margin: 10px;
+  padding: auto;
+}
+
+#proposition p {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+#proposition h1 {
+  font-size: 25px;
+  font-family: "Italiana", sans-serif;
+}
+
+#tak {
+  width: 90%;
+  display: flex;
+  flex-direction: row;
+  /* margin-top: 10px; */
+  align-items: center;
+  text-align: center;
+  justify-content: space-around; 
+  margin: 30px;
+}
+
+#locationstexte {
+  width: 50%;
+  height: 600px;
+  /* background-color: blueviolet; */
+  display: flex;
+  flex-direction: column;
+  /* margin-top: 10px; */
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+
+
+
+
+#locationstexte h3 {
+  margin: 20px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: 60px; 
+  font-size: 50px; 
+  color: #C79B76;  
+}
+
+#locationstexte P {
+  margin: 20px;
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: bold; */
+  font-style: 80px;  
+  font-size: 20px;  
+}
+
+
+.x {
+  width: 90%;
+  height: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.x button {
+  width: 150px;
+  height: 25px;
+  background-color: transparent;
+  border-color: transparent;
+  font-size: 20px;
+  color: blue;
+ 
+
+}
+
+/*  afficher masquer */
+/*Cache la div .content*/
+.content {
+  display: none;
+}
+
+
+/*Affiche .content si sa soeur #affiche est cocchée*/
+#affiche:checked ~ .content {
+  display: block;
+}
+/*  afficher masquer */
+
+.z {
+  width: 90%;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.but button{
+  margin: 20px;
+  font-size: 20px;
+  width: 250px;
+  height: 80px;
+  background-color: #1B4A56;
+  color: #C79B76;
+  border-radius: 15px;
+}
+
+
+#locations {
+  width: 50%;
+  height: 850px;
+  /* background-color: #d7dbd1; */
+  /* margin-top: 10px; */
+}
+#locations img {
+  width: 100%;
+  height: 810px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
