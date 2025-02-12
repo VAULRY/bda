@@ -3,6 +3,7 @@
   <!-- Définit le type de document comme le HTML5 et le langage principale comme le français -->
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="bda.css"> 
     <!--  Définit l'encodage des caractères en UTF-8, permettant d'afficher des caractères spéciaux -->
     <link rel="preconnect" href="https://fonts.googleapis.com">

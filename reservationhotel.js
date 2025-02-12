@@ -32,11 +32,14 @@ const checkIn = document.getElementById('checkIn');
 const checkOut = document.getElementById('checkOut');
 const roomType = document.getElementById('roomType');
 const guests = document.getElementById('guests');
+const litbebe = document.getElementById('litbebe');
+const chaisehaute = document.getElementById('chaisehaute');
 const roomPreview = document.getElementById('roomPreview');
 const roomTitle = document.getElementById('roomTitle');
 const roomDescription = document.getElementById('roomDescription');
 const roomRate = document.getElementById('roomRate');
 const taxes = document.getElementById('taxes');
+const nettoyage = document.getElementById('nettoyage');
 const totalPrice = document.getElementById('totalPrice');
 const availabilityDot = document.getElementById('availabilityDot');
 const availabilityText = document.getElementById('availabilityText');
@@ -179,6 +182,11 @@ async function checkAvailability() {
 }
 
 // Update pricing with animations
+const nettoyageCheckbox = document.getElementById("nettoyageCheckbox");
+const nettoyagePrice = 45.00; // Prix fixe du nettoyage
+
+nettoyageCheckbox.addEventListener("change", updatePricing);
+
 function updatePricing() {
     if (!checkIn.value || !checkOut.value || !roomType.value) return;
 
@@ -190,11 +198,34 @@ function updatePricing() {
     const seasonMultiplier = getSeasonMultiplier(checkInDate);
     const roomTotal = basePrice * nights * seasonMultiplier;
     const taxAmount = roomTotal * 0.085;
+    
+    const nettoyage = nettoyageCheckbox.checked ? 45 : 0;
+    
 
     updatePriceWithAnimation(roomRate, `${roomTotal.toFixed(2)} €`);
     updatePriceWithAnimation(taxes, `${taxAmount.toFixed(2)} €`);
-    updatePriceWithAnimation(totalPrice, `${(roomTotal + taxAmount).toFixed(2)} €`);
+
     
+    // updatePriceWithAnimation(totalPrice, `${(roomTotal + taxAmount).toFixed(2)} €`);
+    const total = (roomTotal + nettoyage +taxAmount).toFixed(2);
+            updatePriceWithAnimation(totalPrice, `${total} €`);
+    // Affiche la valeur totale dans l'input
+    document.getElementById('totalPrice').value = total;
+   
+    // Envoie la valeur totale au serveur pour l'enregistrer
+sendTotalToServer(total);
+
+function sendTotalToServer(total) {
+    const xhr = new XMLHttpRequest();
+    xhr.open('POST', 'submit_reserve.php', true);
+    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+    xhr.onreadystatechange = function () {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            console.log('Total saved successfully');
+        }
+    };
+    xhr.send('total=' + encodeURIComponent(total));
+}
 }
 
 // Input field animations
@@ -260,29 +291,29 @@ form.addEventListener('submit', async (e) => {
         }
     });
 
-    //if (!validateDates()) isValid = false;
+      if (!validateDates()) isValid = false;
     
-    //if (isValid) {
-       // const submitButton = e.target.querySelector('button[type="submit"]');
-       // setLoading(submitButton, true);
+      if (isValid) {
+          const submitButton = e.target.querySelector('button[type="submit"]');
+         setLoading(submitButton, true);
         
-        // Simulate API call
-        //try {
-           // const isAvailable = await checkAvailability();
-           // if (isAvailable) {
-               // showToast('Réservation réussie ! Un e-mail de confirmation sera envoyé sous peu.', 'success');
-               // form.reset();
-               // updatePricing();
-           // } else {
-               // showToast('Désolé, ce logement n est plus diponible aux dates sélectionnées.', 'error');
-            //}
-      //  } catch (error) {
-           // showToast('Une erreur s est produite. Veuillez réessayer.', 'error');
-        //} finally {
-           // setLoading(submitButton, false);
-       // }
+         // Simulate API call
+            try {
+               const isAvailable = await checkAvailability();
+                if (isAvailable) {
+                   showToast('Réservation réussie ! Un e-mail de confirmation sera envoyé sous peu.', 'success');
+                     form.reset();
+                      updatePricing();
+                  } else {
+                     showToast('Désolé, ce logement n est plus diponible aux dates sélectionnées.', 'error');
+                  }
+              } catch (error) {
+                  showToast('Une erreur s est produite. Veuillez réessayer.', 'error');
+              } finally {
+                  setLoading(submitButton, false);
+              }
     }
-//}
+ }
 );
 
 // Initialize the form

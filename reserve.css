@@ -1,21 +1,19 @@
 body{
   max-width:1440px;
   margin: auto;
-  height: 3500px;
-}
-* {
-    
-    font-family: Arial, Helvetica, sans-serif;
+  /* height: 3500px; */
+  font-family: Arial, Helvetica, sans-serif;
     object-fit: cover;
-  }
+  
+}
+
   
 /* _______________ MAIN _______________ */
 
-/* main {
-    width: auto;
-    margin-top: 1%;
+main {
+    background: #2ecc71;
     
-} */
+}
       /*______________section 1 _________________*/
 
  
@@ -83,6 +81,8 @@ body{
     width: 100%;
   }
 }
+
+
 
 /* _______________ SECTION 2 _______________ */
 
@@ -470,184 +470,3 @@ select {
 
 
 
-
-
-/* reservation hotel */
-/* _______________ SECTION 3 AFFICHER/MASQUER_______________ */
-/* #section3 { */
-/* } */
-  .accordion {
-    position: relative;
-    width: 15%;
-    height: 50px;
-    border-radius: 10px;
-    /* background-color: rgb(235, 102, 25); */
-    display: flex;
-    flex-direction: row;
-    margin-top: 100px;
-    justify-content: space-around;
-    border-width: 15px;
-    border:1px solid black;
-  }
-  
-
-
-/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-.active, .accordion:hover {
-  background-color: #943636;
-  width: 250px;
- 
-}
-
-button.accordion.active {
-  width: 300px;
-  height: 50px;
-}
-
-/* Style the accordion panel. Note: hidden by default */
-.panel {
-  padding: 0 18px;
-  background-color: rgb(29, 169, 85);
-  display: none;
-  overflow: hidden;
-   
-  
-}
-
-#proposition {
-  width: 40%;
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-  /* margin-top: 10px; */
-  align-items: normal;
-  text-align: left;
-  justify-content: space-between; 
-  margin: 10px;
-  padding: auto;
-}
-
-#proposition p {
-  font-size: 20px;
-  font-family: "Roboto", sans-serif;
-}
-
-#proposition h1 {
-  font-size: 25px;
-  font-family: "Italiana", sans-serif;
-}
-
-#tak {
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  /* margin-top: 10px; */
-  align-items: center;
-  text-align: center;
-  justify-content: space-around; 
-  margin: 30px;
-}
-
-#locationstexte {
-  width: 50%;
-  height: 600px;
-  /* background-color: blueviolet; */
-  display: flex;
-  flex-direction: column;
-  /* margin-top: 10px; */
-  align-items: center;
-  text-align: center;
-  justify-content: space-between;
-}
-
-
-
-
-
-#locationstexte h3 {
-  margin: 20px;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: 60px; 
-  font-size: 50px; 
-  color: #C79B76;  
-}
-
-#locationstexte P {
-  margin: 20px;
-  font-family: "Roboto", sans-serif;
-  font-optical-sizing: auto;
-  /* font-weight: bold; */
-  font-style: 80px;  
-  font-size: 20px;  
-}
-
-
-.x {
-  width: 90%;
-  height: 150px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.x button {
-  width: 150px;
-  height: 25px;
-  background-color: transparent;
-  border-color: transparent;
-  font-size: 20px;
-  color: blue;
- 
-
-}
-
-/*  afficher masquer */
-/*Cache la div .content*/
-.content {
-  display: none;
-}
-
-
-/*Affiche .content si sa soeur #affiche est cocchée*/
-#affiche:checked ~ .content {
-  display: block;
-}
-/*  afficher masquer */
-
-.z {
-  width: 90%;
-  height: 150px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.but button{
-  margin: 20px;
-  font-size: 20px;
-  width: 250px;
-  height: 80px;
-  background-color: #1B4A56;
-  color: #C79B76;
-  border-radius: 15px;
-}
-
-
-#locations {
-  width: 50%;
-  height: 850px;
-  /* background-color: #d7dbd1; */
-  /* margin-top: 10px; */
-}
-#locations img {
-  width: 100%;
-  height: 810px;
-  border-radius: 20px;
-  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-}

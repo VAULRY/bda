@@ -1,6 +1,6 @@
 <?php
 include 'connex_bdd.php';
-session_start();
+
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nom = $_POST['nom'];

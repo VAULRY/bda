@@ -2,6 +2,8 @@
 <!DOCTYPE HTML>
 <html>
   <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Modifier votre profil</title>
     <link rel="stylesheet" href="modifier_profil.css">
   </head>
@@ -36,11 +38,9 @@
     
  
     <img src="<?php echo htmlspecialchars($_SESSION['photo_profil']); ?>" alt="">
-    
-    <button type="submit" id="decomod" href="modifier_profil.php">Modifier</button>
     <button type="submit" id="deco" href="deconnexion.php">Se déconnecter</button>
-    <!-- <a id="decomod" href="modifier_profil.php">Modifier</a>
-    <a id="deco" href="deconnexion.php">Se déconnecter</a> -->
+    <button type="submit" id="decomod" href="modifier_profil.php">Modifier</button>
+    
     </form>
 </section>
 </main>

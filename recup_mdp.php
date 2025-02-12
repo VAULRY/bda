@@ -4,6 +4,8 @@ include 'connex_bdd.php';
 <!DOCTYPE HTML>
 <html>
   <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Réinitialiser la mot de passe</title>
     <link rel="stylesheet" href="recup_mdp.css">
   </head>

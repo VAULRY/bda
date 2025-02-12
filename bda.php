@@ -4,33 +4,27 @@
   <!-- Définit le type de document comme le HTML5 et le langage principale comme le français -->
 <head>
     <meta charset="UTF-8">
+    
     <title>Le Bois d'Arnette</title>
     <meta name="viemport" content="width=device, initial-scale=1.0">
     <meta name="description" content="Maison de vacances dans le sud sauvage">
     <link rel="stylesheet" href="bda.css"> 
+    <link rel="stylesheet" media="screen and (max-width: 320px)" href="small_screens.css" /> 
     <!--  Définit l'encodage des caractères en UTF-8, permettant d'afficher des caractères spéciaux -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
     <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
     
     <!-- Permet de s'assurer que la mise en page est adaptée pour les différents appareils  -->
     
-    
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"rel="stylesheet"/>
 </head>
 <body>
 
-<link
-      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
-      rel="stylesheet"
-    />
-      
-     
-    
-
-<!--  Codes -->
+<!--  POPUP COOKIES -->
    <div class="wrapper">
       <div class="title-box">
         <i class="bx bx-cookie"></i>
@@ -47,10 +41,10 @@
         <button class="button">Decline</button>
       </div>
     </div>
-
+<!--  POPUP COOKIES -->
 
 <?php require_once(__DIR__.'/includes/header.php'); ?>
-    <main>
+  
 
   <!----------------------- section 1 ----------------------->
 
@@ -58,7 +52,7 @@
     <div id="vue">
         <div class="imagecontainer">
             <video src="images site web\VIDEO VUE DE HAUT.mp4" autoplay muted loop></video>   
-       <div class="image_texte"> Maison de vacances à Grand-Anse le sud sauvage, <br>
+       <div class="image_texte"> Maison de vacances à Grand-Anse le sud sauvage, <br><br><br>
             <h1>Le Bois d'Arnette <br><br><br><br> </h1>        
         </div>
         </div>                       
@@ -73,22 +67,7 @@
         <h3>Réserver votre appartement de vacances au meilleur tarif, en toute sécurité</h3>
     </div>
 <div id="recherche">
-    <!-- <div class ="texte">
-     <label for="start">Date d'arrivée:</label>
-      <input type="date" id="start" name="trip-start" value="<?php echo date('Y-m-d'); ?>" min="2025-01-01" max="2025-12-31" required/>
-    </div>
-    <div class="texte">
-      <label for="start">Date de départ:</label>
-      <input type="date" id="start" name="trip-start" value="<?php echo date('Y-m-d'); ?>" min="2025-01-01" max="2025-12-31" required/>
-    </div>
-    <div class="texte">
-      <label for="tentacles">Adultes :</label>
-      <input type="number" id="tentacles" name="tentacles" min="0" max="10" required />
-    </div>
-    <div class="texte">
-      <label for="tentacles">Enfants :</label>
-      <input type="number" id="tentacles" name="tentacles" min="0" max="10"required />
-    </div> -->
+    
     <a href="reserve.php" target="_blank"><button>Chercher</button></a>
 </div>
 </section>
@@ -430,7 +409,7 @@ La voiture se gare dans la cour. point de départ pour découvrir le sud et est 
             </div>
         </div>
 </section>
-</main>
+
 <?php require_once(__DIR__.'/includes/footer.php'); ?>
         <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
