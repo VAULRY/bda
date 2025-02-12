@@ -38,14 +38,6 @@ CREATE TABLE reservation (
     date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 
--- Créer la table des messages de contact
-CREATE TABLE messages_contact (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    nom VARCHAR(50) NOT NULL,
-    email VARCHAR(100) NOT NULL,
-    message TEXT NOT NULL,
-    date_envoi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
-);
 
 -- Créer la table des prestations
 CREATE TABLE prestations (
