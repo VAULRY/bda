@@ -39,6 +39,7 @@ CREATE TABLE reservation (
 );
 
 
+
 -- Créer la table des prestations
 CREATE TABLE prestations (
     id INT AUTO_INCREMENT PRIMARY KEY,

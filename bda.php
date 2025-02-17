@@ -23,6 +23,7 @@
     <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"rel="stylesheet"/>
 </head>
 <body>
+  <main>
 
 <!--  POPUP COOKIES -->
    <div class="wrapper">
@@ -76,7 +77,7 @@
 
 <section id="section3bda">
     <div id="locations">
-        <img src="images site web\nature-morte-inscription-bois-maison-dans-salon_169016-5187.jpg" alt="">
+        <img src="images site web\home.jpg" alt="">
     </div>
     <div id="locationstexte">
         <h3>Nos Locations saisonniéres</h3>
@@ -157,7 +158,7 @@
           
         </div>
       </li>
-      <li class='item' style="background-image: url('images site web/portrait-happy-young-latin-couple-enjoying-having-dinner-new-home-lifestyle-relationship-concept.jpg')">
+      <li class='item' style="background-image: url('images site web/couple.jpg')">
         <div class='content'>
           <h2 class='title'>"Chez soi"</h2>
           <p class='description'>
@@ -181,7 +182,7 @@
 </section>
 
       
-    <!-- test carousel -->
+    <!-- section 5 commentaire clients test carousel -->
      <section id="carousel">
 
     
@@ -383,7 +384,7 @@ La voiture se gare dans la cour. point de départ pour découvrir le sud et est 
             </ul>
         </div>
         <div class="corps1">
-          <a href="indexerreur.php"target="_blank"><img src="images site web\gros-plan-petit-dejeuner-romantique-au-lit_23-2150956525.jpg" alt="" ></a>
+          <a href="indexerreur.php"target="_blank"><img src="images site web\petit_dejeuner.jpg" alt="" ></a>
             <h3>BENJOIN <br><p>Disponible fin 2025</p></h3> <br>
             
             <ul style="list-style-type:square;">
@@ -391,7 +392,7 @@ La voiture se gare dans la cour. point de départ pour découvrir le sud et est 
               <li>Surface 50 m²</li>
               <li>1 chambre</li>
               <li>1 personne</li>
-              <li>Vue sur montagne <br> et l'océan</li>
+              <li>Vue sur montagne et l'océan</li>
               <li>Balcon</li>
             </ul>
         </div>
@@ -403,7 +404,7 @@ La voiture se gare dans la cour. point de départ pour découvrir le sud et est 
               <li>Surface 50 m²</li>
               <li>1 chambre</li>
               <li>1 personne</li>
-              <li>Vue sur montagne <br> et l'océan</li>
+              <li>Vue sur montagne et l'océan</li>
               <li>Balcon</li>
                 </ul>
             </div>
@@ -421,6 +422,6 @@ La voiture se gare dans la cour. point de départ pour découvrir le sud et est 
         <script  src="./scriptbdacarousel.js"></script>
         <!-- les cookies -->
         <script  src="./scriptcookies.js"></script>
-        
+        </main>
 </body>
 </html>

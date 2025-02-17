@@ -12,9 +12,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nombre_voyageur = $_POST['nombre_voyageur'];
     $litbebe = $_POST['litbebe'];
     $chaisehaute = $_POST['chaisehaute'];
-    $nettoyage = $_POST['nettoyage'];
+    $nettoyage = isset($_POST['nettoyage']) ? $_POST['nettoyage'] : 0; // Attribuer une valeur par défaut si la case n'est pas cochée
     $total = $_POST['total'];
 
+     // Vérifiez les données reçues
+     var_dump($_POST);
+
+     if (empty($total)) {
+        die("Erreur: La valeur de 'total' est vide.");
+    }
+
+    if (!is_numeric($total)) {
+        die("Erreur: La valeur de 'total' doit être un nombre.");
+    }
     
     $sql = "INSERT INTO reservation (nom, telephone, email, date_entre, date_depart, logement, nombre_voyageur, litbebe, chaisehaute, nettoyage, total) VALUES (:nom, :telephone, :email, :date_entre, :date_depart, :logement, :nombre_voyageur,:litbebe, :chaisehaute, :nettoyage, :total)";
     $stmt = $pdo->prepare($sql);

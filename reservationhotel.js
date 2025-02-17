@@ -13,7 +13,7 @@ const roomData = {
         description: 'Logement en cours d aménagement et sera disponible fin 2025',
         basePrice: 50,
         maxGuests: 2,
-        image: 'images site web/gros-plan-petit-dejeuner-romantique-au-lit_23-2150956525.jpg',
+        image: 'images site web/petit_dejeuner.jpg',
         features: ['cette image sera l esprit de l appartement']
     },
     ambaville: {
@@ -99,6 +99,11 @@ function validateDates() {
     document.getElementById('checkOutError').style.display = 'none';
     return true;
 }
+
+
+
+
+
 
 // Price animation
 function updatePriceWithAnimation(element, newValue) {
@@ -207,11 +212,13 @@ function updatePricing() {
 
     
     // updatePriceWithAnimation(totalPrice, `${(roomTotal + taxAmount).toFixed(2)} €`);
-    const total = (roomTotal + nettoyage +taxAmount).toFixed(2);
+    const total = (Number(roomTotal) + Number(nettoyage) +Number(taxAmount)).toFixed(2);
             updatePriceWithAnimation(totalPrice, `${total} €`);
     // Affiche la valeur totale dans l'input
     document.getElementById('totalPrice').value = total;
-   
+    console.log('Valeur totale mise à jour:', document.getElementById('totalPrice').value);
+   // Vérifier la valeur de 'total' avant l'envoi
+   console.log('Total avant l\'envoi:', total);
     // Envoie la valeur totale au serveur pour l'enregistrer
 sendTotalToServer(total);
 
@@ -226,6 +233,8 @@ function sendTotalToServer(total) {
     };
     xhr.send('total=' + encodeURIComponent(total));
 }
+// Appeler la fonction pour mettre à jour le total lors du chargement de la page ou après toute mise à jour des valeurs
+updatePricing();
 }
 
 // Input field animations

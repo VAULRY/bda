@@ -6,12 +6,10 @@
 html{
   max-width:1440px;
   margin: auto;
+  font-family: 'Noto Sans',Arial, Helvetica, sans-serif;
+  object-fit: cover;
 }
 
-* {
-    font-family: 'Noto Sans',Arial, Helvetica, sans-serif;
-    object-fit: cover;
-  }
 /* POPUP COOKIES */
    .wrapper {
     position: fixed;
@@ -80,8 +78,7 @@ html{
   /* POPUP COOKIES */
 /* _______________ MAIN _______________ */
 main {
-  width: auto;
-  margin: 0em;
+  background-color: aqua;
 }
 
 /* _______________ SECTION 1 _______________ */
@@ -496,7 +493,7 @@ main {
 
 
 
-/* test carousel */
+/* section 5 commentaire clients test carousel */
 #carousel {
   width: 1440px;
   height: 600px;
@@ -632,17 +629,17 @@ transform: scale(1.2);
   font-size: 35px;
   font-weight: bold;
   font-family: "Italiana", sans-serif;
-  font-weight: 100;
   font-style: normal;
   color:black;
+ 
 
 }
 
 .corps1 ul {
   position: absolute;
   margin: 20px;
-  font-size: 35px;
-  font-weight: bold;
+  font-size: 25px;
+  width: 350px;
   font-family: "Italiana";
   font-weight: 100;
   font-style: normal;

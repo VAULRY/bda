@@ -1,27 +1,28 @@
-body{
-  max-width:1440px;
-  margin: auto;
-  /* height: 3500px; */
-  font-family: Arial, Helvetica, sans-serif;
-    object-fit: cover;
+@media screen and (max-width: 1024px) {
   
 }
 
-  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+html{
+  max-width:1440px;
+  margin: auto;
+  font-family: 'Noto Sans',Arial, Helvetica, sans-serif;
+  object-fit: cover;
+}
 /* _______________ MAIN _______________ */
 
 main {
-    background: #2ecc71;
+    /* background: #2ecc71; */
     
 }
       /*______________section 1 _________________*/
 
  
   #section1reserver {
-  width: 1440px;
+  width: 100%;
   height: 600px;
   /* background-color: aqua; */
-  margin-top: 0;
+  /* margin-top: 0; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,7 +34,7 @@ main {
   width: 100%;
   height: 600px;
   /* background-color: aqua; */
-  margin-top: 0;
+  /* margin-top: 0; */
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -41,7 +42,7 @@ main {
 } 
 
 #tetereserv img{
-  width: 93.75%;
+  width: 100%;
   height: 600px;
   display: flex;
   flex-direction: row;
@@ -50,7 +51,7 @@ main {
   position: absolute;
   z-index: 1;
   filter: brightness(100%); 
-  margin-top: 0;
+  /* margin-top: 0; */
 }
 #tetereserv h1 {
   position: absolute;
@@ -103,7 +104,7 @@ main {
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  background: rgba(255, 255, 255, 0.95);
+  background:#1B4A56;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -185,6 +186,18 @@ main {
 
 .room-preview img:hover {
   transform: scale(1.03);
+}
+
+#calendar {
+  background: #2b4450;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .5);
+  color: #C79B76;
+  height: 400px;
+  perspective: 1000;
+  transition: .9s;
+  transform-style: preserve-3d;
+  width: 80%;
 }
 
 .form-group {
@@ -274,7 +287,7 @@ button {
   grid-column: 1 / -1;
   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
   color: white;
-  padding: 20px;
+  padding: 10px;
   border: none;
   border-radius: 12px;
   font-size: 18px;

@@ -24,3 +24,4 @@ var stripe = Stripe('pk_test_51QqorEDB288nL4rrFwsnF3bels6Ay3jOh3tYWOAXGTu1QoClVk
       }
     });
   });
+

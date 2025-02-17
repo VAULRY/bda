@@ -3,12 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
     <title>Contact</title>
     <meta name="description" content="Maison de vacances dans le sud sauvage">
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" media="screen and (max-width: 320px)" href="small_screens.css" /> 
+    <!--  Définit l'encodage des caractères en UTF-8, permettant d'afficher des caractères spéciaux -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italiana&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css'>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons'>
+    
+    <!-- Permet de s'assurer que la mise en page est adaptée pour les différents appareils  -->
+    <link href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"rel="stylesheet"/>
 </head>
 
 <?php require_once(__DIR__.'/includes/header.php'); ?>
@@ -29,8 +37,8 @@
         </div>
         <div class="row">
           <div class="columninfo">
-            <p>Formulaire <br><br>
-              Contactez nous pour toute question sur les gîtes <br>
+            <p>Formulaire <br>
+              Contactez nous pour toutes les questions sur les gîtes <br>
               ou sur votre réservation. Pour réserver, merci de <br>
               vous rendre sur la page de réservation. <br><br>
               Rendez vous dans les pages de les locations pour voir <br>
